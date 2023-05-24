@@ -1,15 +1,15 @@
-Mocha Muss
-=============
+# Mocha Muss
 
 A quick repo for Team 5458 to learn Java.
 
+### Java Commands:
 
-Java Commands:
---------------------
+#### Compile Java file into class
+```java
+javac MochaMuss.java
+```
 
-* Compile Java file into class
-> javac MochaMuss.java
-
-* Run compiled class
-> java MochaMuss
-
+#### Run compiled class
+```java
+java MochaMuss
+```
