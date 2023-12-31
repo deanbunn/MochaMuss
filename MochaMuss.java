@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+//import java.util.*;
 
 
 public class MochaMuss {
@@ -24,37 +25,53 @@ public class MochaMuss {
 
 class MussPerson
 {
-     private String _FirstName;
-     private String _MiddleName;
-     private String _LastName;
-     private LocalDate Birthday;
+
+    public String firstName;
+    public String middleName;
+    public String lastName;
+    public String displayName;
+    public int strengthScore;
+    public int dexterityScore;
+    public int constitutionScore;
+    public int intelligenceScore;
+    public int wisdomScore;
+    public int charismaScore;
+    public LocalDate birthday;
+    
      
-     public MussPerson(String fName, String mName, String lName,int bYear, int bMonth, int bDayOfMonth)
-     {
-        _FirstName = fName;
-        _MiddleName = mName;
-        _LastName = lName;
-        Birthday = LocalDate.of(bYear,bMonth,bDayOfMonth);
-     }
+    public MussPerson(String fName, String mName, String lName,int bYear, int bMonth, int bDayOfMonth)
+    {
 
-     public String getDisplayName()
-     {
-        String displayName = "";
+        firstName = fName;
+        middleName = mName;
+        lastName = lName;
+        strengthScore = 0;
+        dexterityScore = 0;
+        constitutionScore = 0;
+        intelligenceScore = 0;
+        wisdomScore = 0;
+        charismaScore = 0;
+        birthday = LocalDate.of(bYear,bMonth,bDayOfMonth);
 
-        if(_MiddleName != null && _MiddleName.isEmpty() == false)
+        //Configure Initial Display Name
+        if(mName != null && mName.isEmpty() == false)
         {
-            displayName = _FirstName + " " + _MiddleName + " " + _LastName;
+            displayName = firstName + " " + middleName + " " + lastName;
         }
         else
         {
-            displayName = _FirstName + " " + _LastName;
+            displayName = firstName + " " + lastName;
         }
 
+    }
+
+     public String getDisplayName()
+     {
         return displayName;
      }
 
      public LocalDate getBirthDay()
      {
-        return Birthday;
+        return birthday;
      }
 }
